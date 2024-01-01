@@ -1,5 +1,5 @@
 <?php
-require_once('./Model/user-info-model.php');
+require_once('../Model/user-info-model.php');
 if(isset($_POST['submit'])){
     $email=$_POST['username'];
     $password=$_POST['password'];

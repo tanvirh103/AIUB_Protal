@@ -1,5 +1,5 @@
 <?php
-require_once('./Model/user-info-model.php');
+require_once('database.php');
     function checkuser($email,$password){
         $conn=dbConnection();
         $sql="SELECT * FROM userinfo WHERE Email='$email' AND Password='$password'";
