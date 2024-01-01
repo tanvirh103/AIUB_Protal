@@ -12,4 +12,14 @@ require_once('database.php');
             return false;
         }
     }
+    function getinfo($id){
+        $conn=dbConnection();
+        $sql="SELECT * FROM userinfo WHERE userId='$id'";
+        $result=mysqli_query($conn,$sql);
+        $count=mysqli_num_rows($result);
+        if($count==1){
+            $row=mysqli_fetch_assoc($result);
+            return $row;
+        }
+    }
 ?>
