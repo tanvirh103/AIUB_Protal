@@ -16,10 +16,12 @@ $row=getinfo($id);
 <body>
     <center><font size="15">Dashboard</font><br><hr width="30%" color="#004ca3"></center><br>
     <center>
-        <table border="1" cellpadding="15" cellspacing="0" bordercolor="#004ca3"><tr><td><font family="times new roman">
+        <table width="auto" border="1" cellpadding="25" cellspacing="0" bordercolor="#004ca3"><tr><td><font family="times new roman" size="3">
             <?php
             if($row['role']=="Admin"){
-                echo"Admin Dashboard";
+               echo" <a href=\"addstudent.php\">Create New student Account</a><br><br>
+                <a href=\"facultylist.php\">Faculty List</a><br><br>
+                <a href=\"studentlist.php\">Student List</a><br><br>";
             }else{
                 echo"Wrong Dashboard";
             }
@@ -27,5 +29,6 @@ $row=getinfo($id);
             </font></td></tr>
         </table>
     </center>
+    <table align="right"><tr><td>logout</td></tr></table>
 </body>
 </html>
