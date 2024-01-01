@@ -27,8 +27,8 @@ $row=getinfo($id);
                 echo" <a href=\"addfaculty.php\">Create New Faculty</a><br><br>
                 <a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>";
-            }else if($row['role']=="Studnet"){
-                echo" <a href=\"addstudent.php\">View Profile Information</a><br><br>
+            }else if($row['role']=="Student"){
+                echo" <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>
                 <a href=\"facultylist.php\">Registred Course</a><br><br>";
             }
             ?>

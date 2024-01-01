@@ -7,10 +7,11 @@ if(isset($_POST['submit'])){
     $password=$_POST['password'];
     $dob=$_POST['dob'];
     $remarks=$_POST['remarks'];
-    $result=addnewfaculty($name,$email,$password,$dob,$remarks);
-    if($result!=false){
-        message("New Faculty added");
-    }
+    // $result=addnewfaculty($name,$email,$password,$dob,$remarks);
+    // if($result!=false){
+    //     message("New Faculty added");
+    // }
+    echo $remarks;
 }
 
 ?>
