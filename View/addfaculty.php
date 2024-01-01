@@ -14,14 +14,19 @@
         <form action="../Controller/add-faculty-controller.php" method="post">
         <table border="1" width="30%" align="center" bordercolor="#004ca3" cellpadding="15" cellspacing="0">
             <tr><td><center><font family="times new roman">
-            Fullname :&nbsp;<input type="text" name="username" size="40"><br><br>
-            Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" size="40"><br><br>
-            Password :&nbsp;<input type="password" name="password" size="40"><br><br>
+            Fullname :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="username" size="40"><br><br>
+            Father's Name :&nbsp;&nbsp;<input type="text" name="fathersname" size="40"><br><br>
+            Mother's Name :&nbsp;<input type="text" name="mothersname" size="40"><br><br>
+            Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" size="40"><br><br>
+            Password :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" size="40"><br><br>
             Date Of Birth :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="date" name="dob" align="left"><br><br>
-            Faculty Category:&nbsp;&nbsp;&nbsp;&nbsp;
+            Faculty Category:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <select name="remarks" id="remarks">
                 <option selected value="">Select Faculty Group</option>
                 <option value="OSA">OSA</option>
