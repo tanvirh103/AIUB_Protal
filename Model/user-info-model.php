@@ -22,15 +22,15 @@ require_once('database.php');
             return $row;
         }
     }
-    function addnewstudent($name,$email,$password,$dob){
+    function addnewstudent($name,$email,$father,$mother,$password,$dob,$bg){
         $conn=dbConnection();
-        $sql="INSERT INTO userinfo VALUES('','$name','Uploads/default.jpg','$email','$password','Sutdent','$dob','Active','')";
+        $sql="INSERT INTO userinfo VALUES('','$name','Uploads/default.jpg','$father','$mother','$email','$password','Sutdent','$dob','$bg','Active','')";
         $result=mysqli_query($conn,$sql);
         return true;
     }
-    function addnewfaculty($name,$email,$password,$dob,$remarks){
+    function addnewfaculty($name,$email,$father,$mother,$password,$dob,$bg,$remarks){
         $conn=dbConnection();
-        $sql="INSERT INTO userinfo VALUES('','$name','Uploads/default.jpg','$email','$password','Faculty','$dob','Active','$remarks')";
+        $sql="INSERT INTO userinfo VALUES('','$name','Uploads/default.jpg','$father','$mother','$email','$password','Faculty','$dob','$bg','Active','$remarks')";
         $result=mysqli_query($conn,$sql);
         return true;
     }
