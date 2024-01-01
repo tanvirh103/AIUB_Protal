@@ -24,7 +24,7 @@ $row=getinfo($id);
                 <a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>";
             }else if($row['role']=="Admin HR"){
-                echo" <a href=\"addstudent.php\">Create New Faculty</a><br><br>
+                echo" <a href=\"addfaculty.php\">Create New Faculty</a><br><br>
                 <a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>";
             }else if($row['role']=="Studnet"){

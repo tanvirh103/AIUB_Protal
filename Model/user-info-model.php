@@ -28,4 +28,10 @@ require_once('database.php');
         $result=mysqli_query($conn,$sql);
         return true;
     }
+    function addnewfaculty($name,$email,$password,$dob,$remarks){
+        $conn=dbConnection();
+        $sql="INSERT INTO userinfo VALUES('','$name','Uploads/default.jpg','$email','$password','Faculty','$dob','Active','$remarks')";
+        $result=mysqli_query($conn,$sql);
+        return true;
+    }
 ?>

@@ -1,5 +1,6 @@
 <?php
 require_once('../Model/user-info-model.php');
+require_once('message-controller.php');
 if(isset($_POST['submit'])){
     $name=$_POST['username'];
     $email=$_POST['email'];
@@ -7,7 +8,7 @@ if(isset($_POST['submit'])){
     $dob=$_POST['dob'];
     $result=addnewstudent($name,$email,$password,$dob);
     if($result!=false){
-        echo "New Student added";
+        message("New Student added");
     }
 }
 

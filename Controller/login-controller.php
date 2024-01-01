@@ -1,5 +1,6 @@
 <?php
 require_once('../Model/user-info-model.php');
+require_once('message-controller.php');
 if(isset($_POST['submit'])){
     $email=$_POST['username'];
     $password=$_POST['password'];
@@ -10,10 +11,10 @@ if(isset($_POST['submit'])){
             setcookie("flag",$result['userId'],time()+3600,'/');
             header('location:../View/dashboard.php');
         }else{
-            echo"Your are ban from the system";
+            message("Your are ban from the system");
         }
     }else{
-        echo "User Not found";
+        message("User Not found");
     }
 }
 ?>
