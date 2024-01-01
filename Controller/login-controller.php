@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
 
     if($result!=false){
         if($result['status']=="Active"){
-            setcookie('user',$result['userId'],time()+3600,'/');
+            setcookie("flag",$result['userId'],time()+3600,'/');
             header('location:../View/dashboard.php');
         }else{
             echo"Your are ban from the system";

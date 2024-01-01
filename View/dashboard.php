@@ -1,9 +1,10 @@
 <?php
 require_once('../Model/user-info-model.php');
-if(!isset($_COOKIE['user'])){
-    echo"You cann't access the page";
+require_once('../Controller/message-controller.php');
+if(!isset($_COOKIE['flag'])){
+    message("You cann't access the page");
 }
-$id=$_COOKIE['user'];
+$id=$_COOKIE['flag'];
 $row=getinfo($id);
 ?>
 <!DOCTYPE html>
@@ -19,16 +20,21 @@ $row=getinfo($id);
         <table width="auto" border="1" cellpadding="25" cellspacing="0" bordercolor="#004ca3"><tr><td><font family="times new roman" size="3">
             <?php
             if($row['role']=="Admin"){
-               echo" <a href=\"addstudent.php\">Create New student Account</a><br><br>
+               echo" <a href=\"addstudent.php\">Create New student</a><br><br>
                 <a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>";
-            }else{
-                echo"Wrong Dashboard";
+            }else if($row['role']=="Admin HR"){
+                echo" <a href=\"addstudent.php\">Create New Faculty</a><br><br>
+                <a href=\"facultylist.php\">Faculty List</a><br><br>
+                <a href=\"studentlist.php\">Student List</a><br><br>";
+            }else if($row['role']=="Studnet"){
+                echo" <a href=\"addstudent.php\">View Profile Information</a><br><br>
+                <a href=\"facultylist.php\">Registred Course</a><br><br>";
             }
             ?>
             </font></td></tr>
         </table>
     </center>
-    <table align="right"><tr><td>logout</td></tr></table>
+    <table align="right"><tr><td><a href="logout.php">logout</a></td></tr></table>
 </body>
 </html>
