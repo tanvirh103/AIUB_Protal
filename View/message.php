@@ -12,7 +12,6 @@ $message=$_SESSION['message'];
 <body>
     <center>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br>
         <font face="times new roman" size="7"><?php echo $message ?></font>
     </center>
 </body>
