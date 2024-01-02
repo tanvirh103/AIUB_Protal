@@ -16,17 +16,20 @@ $row=getinfo($id);
 </head>
 <body>
     <center><font family="times new roman" size="6">Profile information</font><br><hr width="30%" color="#004ca3"><br></center>
-    <center><table width="30%" cellspacing="0" cellpadding="25" bordercolor="#004ca3" border="1">
+    <center><table width="auto" cellspacing="0" cellpadding="25" bordercolor="#004ca3" border="1">
         <tr><td><center><font size="4">
             <img src="../<?php echo $row['profilePicture']  ?>" alt="Profile Picture" width="200" height="200"><br><br>
-            Fullname :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo$row['userName'] ?><br><br>
-            Father's Name :&nbsp;&nbsp;&nbsp;<?php echo$row['fathersName'] ?><br><br>
-            Mother's Name :&nbsp;&nbsp;&nbsp;&nbsp;<?php echo$row['mothersName'] ?><br><br>
-            Blood Group :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Fullname :&nbsp;&nbsp; <input type="text" value="<?php echo$row['userName'] ?>" size="30" align="center" readonly> <br><br>
+            Father's Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo$row['fathersName'] ?><br><br>
+            Mother's Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;<?php echo$row['mothersName'] ?><br><br>
+            Blood Group :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <?php echo$row['bloodGroup'] ?><br><br>
             Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo$row['email'] ?><br><br>
-            Date Of Birth :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Date Of Birth :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo$row['dob'] ?><br><br>
         </center></font></td></tr>
     </table></center>
