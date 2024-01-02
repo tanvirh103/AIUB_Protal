@@ -34,4 +34,17 @@ require_once('database.php');
         $result=mysqli_query($conn,$sql);
         return true;
     }
+
+    function getallfaculty(){
+        $conn=dbConnection();
+        $sql="SELECT * FROM userinfo WHERE role='Faculty'";
+        $result=mysqli_query($conn,$sql);
+        return $result;
+    }
+    function getallstudent(){
+        $conn=dbConnection();
+        $sql="SELECT * FROM userinfo WHERE role='Student'";
+        $result=mysqli_query($conn,$sql);
+        return $result;
+    }
 ?>
