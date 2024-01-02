@@ -24,7 +24,7 @@ require_once('database.php');
     }
     function addnewstudent($name,$email,$father,$mother,$password,$dob,$bg){
         $conn=dbConnection();
-        $sql="INSERT INTO userinfo VALUES('','$name','Uploads/default.jpg','$father','$mother','$email','$password','Sutdent','$dob','$bg','Active','')";
+        $sql="INSERT INTO userinfo VALUES('','$name','Uploads/default.jpg','$father','$mother','$email','$password','Student','$dob','$bg','Active','')";
         $result=mysqli_query($conn,$sql);
         return true;
     }

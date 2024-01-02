@@ -33,7 +33,7 @@ $result=getallfaculty();
                 $email=$row['email'];
                 $bg=$row['bloodGroup'];
              echo"   <tr>
-                <td><img src=\"../$profilepicture\" alt=\"profile picture\" width=\"170\" height=\"200\"></td>
+                <td><img src=\"../$profilepicture\" alt=\"profile picture\" width=\"150\" height=\"150\"></td>
                 <td>$fullname</td>
                 <td>$father</td>
                 <td>$mother</td>
