@@ -47,4 +47,11 @@ require_once('database.php');
         $result=mysqli_query($conn,$sql);
         return $result;
     }
+
+    function addnewhradmin($name,$email,$father,$mother,$password,$dob,$bg){
+        $conn=dbConnection();
+        $sql="INSERT INTO userinfo VALUES('','$name','Uploads/default.jpg','$father','$mother','$email','$password','Admin HR','$dob','$bg','Active','')";
+        $result=mysqli_query($conn,$sql);
+        return true;
+    }
 ?>
