@@ -19,8 +19,8 @@ $row=getinfo($id);
     <center><table width="auto" cellspacing="0" cellpadding="25" bordercolor="#004ca3" border="1">
         <tr><td><center><font size="4">
             <img src="../<?php echo $row['profilePicture']  ?>" alt="Profile Picture" width="200" height="200"><br><br>
-            Fullname :&nbsp;&nbsp; <input type="text" value="<?php echo$row['userName'] ?>" size="30" align="center" readonly> <br><br>
-            Father's Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo$row['fathersName'] ?><br><br>
+            Fullname :&nbsp;&nbsp;<input type="text" value="<?php echo$row['userName'] ?>" size="30" align="center" readonly> <br><br>
+            Father's Name :&nbsp;&nbsp;<input type="text" value="<?php echo$row['fathersName'] ?>" size="30" align="center" readonly><br><br>
             Mother's Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;<?php echo$row['mothersName'] ?><br><br>
             Blood Group :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
