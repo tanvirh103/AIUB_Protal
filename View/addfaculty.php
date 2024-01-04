@@ -6,7 +6,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Add Faculty</title>
+
 </head>
 <body>
 <center><font family="times new roman" size="6">Add New Faculty</font><br><hr color="#004ca3" width="30%" bordercolor="#004ca3"><br></center>
@@ -51,7 +53,7 @@
                 <option value="SENIOR LECTURER">SENIOR LECTURER</option>
                 <option value="LECTURER">LECTURER</option>
             </select><br><br>
-            <button name="submit">Create New account</button><br><br>
+            <input type="submit" name="submit" value="Create New account"><br><br>
             </font></center></td></tr>
         </table>
         </form>

@@ -1,4 +1,4 @@
-a:link,a:visited  {
+    a:link,a:visited  {
     text-decoration:none;
     color: black;
   }
@@ -8,3 +8,13 @@ a:link,a:visited  {
   a:active {
     color: blue;
   }
+
+
+input[type=submit]{
+background-color: #3770aa;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  text-decoration: none;
+  cursor: pointer;
+}

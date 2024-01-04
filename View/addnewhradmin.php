@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Document</title>
 </head>
 <body>
@@ -40,7 +41,7 @@
                 <option value="O+">O+</option>
                 <option value="O-">A-</option>
             </select><br><br>
-            <button name="submit">Create New account</button><br><br>
+            <input type="submit" name="submit" value="Create New account"><br><br>
             </font></center></td></tr>
         </table>
         </form>
