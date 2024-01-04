@@ -13,6 +13,7 @@ $row=getinfo($id);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <center><font size="15">Dashboard</font><br><hr width="30%" color="#004ca3"></center><br>
