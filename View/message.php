@@ -16,3 +16,10 @@ $message=$_SESSION['message'];
     </center>
 </body>
 </html>
+<?php 
+if(isset($_COOKIE['flag'])){
+    header("refresh:2;url=dashboard.php");
+}else{
+    header("refresh:2;url=../index.html");
+}
+?>

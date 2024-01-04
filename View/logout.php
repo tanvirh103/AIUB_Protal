@@ -12,5 +12,5 @@
 </html>
 <?php
 setcookie("flag","",time()-36000,'/');
-header("refresh:2;url=../index.html");
+header("refresh:3;url=../index.html");
 ?>
