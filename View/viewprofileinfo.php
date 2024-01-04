@@ -16,7 +16,7 @@ $row=getinfo($id);
 </head>
 <body>
     <center><font family="times new roman" size="6">Profile information</font><br><hr width="30%" color="#004ca3"><br></center>
-    <center><table width="auto" cellspacing="0" cellpadding="25" bordercolor="#004ca3" border="1">
+    <center><table width="auto" cellspacing="0" cellpadding="15" bordercolor="#004ca3" border="1">
         <tr><td><center><font size="4">
             <img src="../<?php echo $row['profilePicture']  ?>" alt="Profile Picture" width="200" height="200"><br><br>
             Fullname :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" value="<?php echo$row['userName'] ?>" size="25" align="center" readonly> <br><br>

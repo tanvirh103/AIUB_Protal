@@ -13,7 +13,7 @@ $result=getallfaculty();
     <center><font family="times new roman" size="6">Faculty List</font><br><hr width="20%" color="#004ca3">
     <br><input type="text" id="search" placeholder="Search by Fullname" onkeyup="" size="25"><br>
 </center>
-    <center><br><table width="auto" cellspacing="0" cellpadding="25" bordercolor="#004ca3" border="1"><font family="times new roman" size="4">
+    <center><br><table width="auto" cellspacing="0" cellpadding="15" bordercolor="#004ca3" border="1"><font family="times new roman" size="4">
         <font family="times new roman"></font>
         <?php if(mysqli_num_rows($result)>0){
          echo"<tr><td>Profile Picture</td>
