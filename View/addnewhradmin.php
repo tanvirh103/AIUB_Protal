@@ -13,7 +13,7 @@
 <center><font family="times new roman" size="6">Add New HR Admin</font><br><hr color="#004ca3" width="30%" bordercolor="#004ca3"><br></center>
     <center>
         <form action="../Controller/add-hr-admin-controller.php" method="post">
-        <table border="1" width="30%" align="center" bordercolor="#004ca3" cellpadding="15" cellspacing="0">
+        <table border="1" width="auto" align="center" bordercolor="#004ca3" cellpadding="15" cellspacing="0">
             <tr><td><center><font family="times new roman">
             Fullname :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" name="username" size="40"><br><br>
