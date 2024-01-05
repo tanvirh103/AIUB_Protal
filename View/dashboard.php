@@ -22,23 +22,26 @@ $row=getinfo($id);
             <?php
             if($row['role']=="Admin"){
                echo" <a href=\"addstudent.php\">Create New student</a><br><br>
+               <a href=\"addnewhradmin.php\">Create New HR Admin</a><br><br>
                 <a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>
-                <a href=\"addnewhradmin.php\">Create New HR Admin</a><br><br>
+                <a href=\"setting.php\">Profile Setting</a><br><br>
                 <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>";
             }else if($row['role']=="Admin HR"){
                 echo"<a href=\"addfaculty.php\">Create New Faculty</a><br><br>
                 <a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>
-                <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>";
+                <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>
+                <a href=\"setting.php\">Profile Setting</a><br><br>";
             }else if($row['role']=="Student"){
                 echo" <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>
-                <a href=\"facultylist.php\">Registred Course</a><br><br>";
+                <a href=\"facultylist.php\">Registred Course</a><br><br>
+                <a href=\"setting.php\">Profile Setting</a><br><br>";
             }else if($row['role']=="Faculty"){
                 echo" <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>
                 <a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>
-                <a href=\"studentlist.php\">Registared Course</a><br><br>";
+                <a href=\"setting.php\">Profile Setting</a><br><br>";
             }
             ?>
             </font></td></tr>
