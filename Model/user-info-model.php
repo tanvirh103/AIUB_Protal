@@ -67,4 +67,11 @@ require_once('database.php');
         $result=mysqli_query($conn,$sql);
         return $result;
     }
+    function updatepassword($id,$new){
+        $conn=dbConnection();
+        $sql="UPDATE userinfo SET password = '$new' WHERE userId = '$id'";
+        $result=mysqli_query($conn,$sql);
+        return true;
+    }
+    
 ?>

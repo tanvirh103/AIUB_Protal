@@ -14,6 +14,8 @@ if(isset($_POST['submit'])){
     $result=addnewfaculty($name,$email,$father,$mother,$password,$dob,$bg,$remarks);
     if($result!=false){
         message("New Faculty added");
+    }else{
+        message("You can't Add faculty");
     }
     
 }

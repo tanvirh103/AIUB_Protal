@@ -13,6 +13,8 @@ if(isset($_POST['submit'])){
     $result=addnewhradmin($name,$email,$father,$mother,$password,$dob,$bg,$remarks);
     if($result!=false){
         message("New HR Admin added");
+    }else{
+        message("You can't Add HR Admin");
     }
     
 }

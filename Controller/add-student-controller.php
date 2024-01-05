@@ -12,6 +12,8 @@ if(isset($_POST['submit'])){
     $result=addnewstudent($name,$email,$father,$mother,$password,$dob,$bg);
     if($result!=false){
         message("New Student added");
+    }else{
+        message("You can't Add Student");
     }
 }
 
