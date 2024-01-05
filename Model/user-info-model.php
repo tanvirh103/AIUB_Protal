@@ -54,4 +54,17 @@ require_once('database.php');
         $result=mysqli_query($conn,$sql);
         return true;
     }
+
+    function searchstudent($name){
+        $conn=dbConnection();
+        $sql="SELECT * FROM userinfo WHERE userName LIKE '%$name%' AND role='Student'";
+        $result=mysqli_query($conn,$sql);
+        return $result;
+    }
+    function searchfaculty($name){
+        $conn=dbConnection();
+        $sql="SELECT * FROM userinfo WHERE userName LIKE '%$name%' AND role='Faculty'";
+        $result=mysqli_query($conn,$sql);
+        return $result;
+    }
 ?>

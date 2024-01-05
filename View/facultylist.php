@@ -7,14 +7,15 @@ $result=getallfaculty();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script.js"></script>
     <title>Faculty List</title>
 </head>
 <body>
     <center><font family="times new roman" size="6">Faculty List</font><br><hr width="20%" color="#004ca3">
-    <br><input type="text" id="search" placeholder="Search by Fullname" onkeyup="" size="25"><br>
+    <br><input type="text" id="search" placeholder="Search by Fullname" onkeyup="searchfaculty(this.value)" size="25"><br><br><br>
+    <font family="times new roman" id="message"></font><br>
 </center>
     <center><br><table width="auto" cellspacing="0" cellpadding="15" bordercolor="#004ca3" border="1"><font family="times new roman" size="4">
-        <font family="times new roman"></font>
         <?php if(mysqli_num_rows($result)>0){
          echo"<tr><td>Profile Picture</td>
             <td>Fullname</td>
