@@ -2,17 +2,22 @@
 require_once('message-controller.php');
 require_once('../Model/user-info-model.php');
 $id=$_COOKIE['flag'];
+$row=getinfo($id);
 if(isset($_POST['submit'])){
     $old=$_POST['oldpassword'];
     $new=$_POST['newpassword'];
     $confirm=$_POST['confirmpassword'];
     if($new==$confirm){
-        $result=updatepassword($id,$new);
-        if($result!=false){
-            message("Password Changed");
+        if($row['password']==$old){
+            $result=updatepassword($id,$new);
+            if($result!=false){
+                message("Password Changed");
+            }else{
+                message("Failed to change password");
+            }
         }else{
-            message("Failed to change password");
-        }
+            message("Old Password Does't Match");
+        }   
     }else{
         message("New Password Does't Match");
     }
