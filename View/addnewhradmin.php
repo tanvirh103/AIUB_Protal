@@ -1,5 +1,8 @@
 <?php
-
+require_once('../Controller/message-controller.php');
+if(!isset($_COOKIE['flag'])){
+    message("You cann't access the page");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

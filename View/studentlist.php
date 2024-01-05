@@ -1,5 +1,9 @@
 <?Php
 require_once('../Model/user-info-model.php');
+require_once('../Controller/message-controller.php');
+if(!isset($_COOKIE['flag'])){
+    message("You cann't access the page");
+}
 $result=getallstudent();
 ?>
 <!DOCTYPE html>
