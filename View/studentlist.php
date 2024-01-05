@@ -12,7 +12,7 @@ $result=getallstudent();
     <title>Studnet List</title>
 </head>
 <body>
-    <center><font family="times new roman" size="6">Student List</font><br><hr width="20%" color="#004ca3">
+    <center><font family="times new roman" size="6">Student List</font><br><hr width="15%" color="#004ca3">
     <br><input type="text" id="search" placeholder="Search by Fullname" onkeyup="search(this.value)" size="25"><br><br>
     <font family="times new roman" id="message"></font>
     </center>

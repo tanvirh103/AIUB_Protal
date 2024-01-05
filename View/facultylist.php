@@ -1,6 +1,9 @@
 <?Php
 require_once('../Model/user-info-model.php');
 $result=getallfaculty();
+$id=$_COOKIE['flag'];
+$row=getinfo($id);
+$role=$row['role'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +14,7 @@ $result=getallfaculty();
     <title>Faculty List</title>
 </head>
 <body>
-    <center><font family="times new roman" size="6">Faculty List</font><br><hr width="20%" color="#004ca3">
+    <center><font family="times new roman" size="6">Faculty List</font><br><hr width="15%" color="#004ca3">
     <br><input type="text" id="search" placeholder="Search by Fullname" onkeyup="searchfaculty(this.value)" size="25"><br><br>
     <font family="times new roman" id="message"></font>
 </center>

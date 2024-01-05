@@ -16,7 +16,7 @@ $row=getinfo($id);
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <center><font size="15">Dashboard</font><br><hr width="30%" color="#004ca3"></center><br>
+    <center><font size="15">Dashboard</font><br><hr width="20%" color="#004ca3"></center><br>
     <center>
         <table width="auto" border="1" cellpadding="25" cellspacing="0" bordercolor="#004ca3"><tr><td><font family="times new roman" size="3">
             <?php

@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<center><font family="times new roman" size="6">Add New Faculty</font><br><hr color="#004ca3" width="30%" bordercolor="#004ca3"><br></center>
+<center><font family="times new roman" size="6">Add New Faculty</font><br><hr color="#004ca3" width="20%" bordercolor="#004ca3"><br></center>
     <center>
         <form action="../Controller/add-faculty-controller.php" method="post">
         <table border="1" width="auto" align="center" bordercolor="#004ca3" cellpadding="15" cellspacing="0">
