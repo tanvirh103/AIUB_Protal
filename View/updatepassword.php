@@ -12,9 +12,9 @@
     <center><br><form action="../Controller/update-password-controller.php" method="post"><table width="auto" cellspacing="0" cellpadding="15" bordercolor="#004ca3" border="1"><font family="times new roman" size="4">
         <tr>
             <td><center>
-                Old Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="oldpassword" id="oldpassword" size="30"><br><br>
-                New Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="newpassword" id="newpassword" size="30"><br><br>
-                Confirm Password:&nbsp;&nbsp; <input type="password" name="confirmpassword" id="confirmpassword" size="30"><br><br><br>
+                Old Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="oldpassword" id="oldpassword" size="30" required><br><br>
+                New Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="newpassword" id="newpassword" size="30" required><br><br>
+                Confirm Password:&nbsp;&nbsp; <input type="password" name="confirmpassword" id="confirmpassword" size="30" required><br><br><br>
                 <input type="submit" name="submit" value="Update Password"><br>
             </td>
         </tr>
