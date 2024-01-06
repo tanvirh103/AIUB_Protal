@@ -79,5 +79,10 @@ require_once('database.php');
         $result=mysqli_query($conn,$sql);
         return true;
     }
-    
+    function updateprofilepicture($file,$id){
+        $conn=dbConnection();
+        $sql="UPDATE userinfo SET profilePicture = '$file' WHERE userId = '$id'";
+        $result=mysqli_query($conn,$sql);
+        return true;
+    }
 ?>
