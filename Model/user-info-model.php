@@ -73,5 +73,11 @@ require_once('database.php');
         $result=mysqli_query($conn,$sql);
         return true;
     }
+    function updateuserinfo($id,$name,$father,$mother,$bg,$dob,$email){
+        $conn=dbConnection();
+        $sql="UPDATE userinfo SET userName='$name',fathersName='$father',mothersname='$mother',bloodGroup='$bg',dob='$dob',email='$email' WHERE userId = '$id'";
+        $result=mysqli_query($conn,$sql);
+        return true;
+    }
     
 ?>
