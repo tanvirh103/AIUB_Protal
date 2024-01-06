@@ -23,6 +23,7 @@ $row=getinfo($id);
             if($row['role']=="Admin"){
                echo" <a href=\"addstudent.php\">Create New student</a><br><br>
                <a href=\"addnewhradmin.php\">Create New HR Admin</a><br><br>
+               <a href=\"addnewcourse.php\">Add New Course</a><br><br>
                 <a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>
                 <a href=\"setting.php\">Profile Setting</a><br><br>
