@@ -1,7 +1,8 @@
 <?php
-if(isset($_GET['submit'])){
-    $course=$_GET['coursename'];
-    $courseteacher=$_GET['courseteacher'];
-    echo $_GET['courseteacher'];
+require_once('message-controller.php');
+if(isset($_POST['submit'])){
+    $name=$_POST['coursename'];
+    $teacher=$_POST['courseteacher'];
 }
+
 ?>
