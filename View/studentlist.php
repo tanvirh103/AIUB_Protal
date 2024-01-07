@@ -4,7 +4,9 @@ require_once('../Controller/message-controller.php');
 if(!isset($_COOKIE['flag'])){
     message("You cann't access the page");
 }
+$id=$_COOKIE['flag'];
 $result=getallstudent();
+$row1=getinfo($id);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,9 +30,13 @@ $result=getallstudent();
             <td>Mother's Name</td>
             <td>Blood Group</td>
             <td>Email</td>
-            <td>Date Of Birth</td>           
-            </tr>";
+            <td>Date Of Birth</td>";
+            if($row1['role']=="Admin"){
+            echo"<td>Action</td>";
+            }
+            echo"</tr>";
             while($row=mysqli_fetch_assoc($result)){
+                $sid=$row['userId'];
                 $profilepicture=$row['profilePicture'];
                 $fullname=$row['userName'];
                 $father=$row['fathersName'];
@@ -38,7 +44,6 @@ $result=getallstudent();
                 $dob=$row['dob'];
                 $email=$row['email'];
                 $bg=$row['bloodGroup'];
-                
              echo"
                 <tr>
                 <td><img src=\"../$profilepicture\" alt=\"profile picture\" width=\"150\" height=\"150\"></td>
@@ -47,8 +52,11 @@ $result=getallstudent();
                 <td>$mother</td>
                 <td>$bg</td>
                 <td>$email</td>
-                <td>$dob</td>
-                </tr>";
+                <td>$dob</td>";
+                if($row1['role']=="Admin"){
+                    echo"<td><a href=\"viewprofileinfo.php?sid=$sid\"><input type=\"submit\" value=\"View Profile Info\"></td>";
+                }
+                    echo"</tr>";
             }
         }else{
             echo"No Student Found";

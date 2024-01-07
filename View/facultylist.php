@@ -6,14 +6,14 @@ if(!isset($_COOKIE['flag'])){
 }
 $result=getallfaculty();
 $id=$_COOKIE['flag'];
-$row=getinfo($id);
-$role=$row['role'];
+$row1=getinfo($id);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <script src="../script.js"></script>
     <title>Faculty List</title>
 </head>
@@ -30,9 +30,13 @@ $role=$row['role'];
             <td>Mother's Name</td>
             <td>Blood Group</td>
             <td>Email</td>
-            <td>Date Of Birth</td>           
-            </tr>";
+            <td>Date Of Birth</td>";
+            if($row1['role']=="Admin"){
+                echo"<td>Action</td>";
+                }
+                echo"</tr>";
             while($row=mysqli_fetch_assoc($result)){
+                $sid=$row['userId'];
                 $profilepicture=$row['profilePicture'];
                 $fullname=$row['userName'];
                 $father=$row['fathersName'];
@@ -47,8 +51,11 @@ $role=$row['role'];
                 <td>$mother</td>
                 <td>$bg</td>
                 <td>$email</td>
-                <td>$dob</td>
-                </tr>";
+                <td>$dob</td>";
+                if($row1['role']=="Admin"){
+                    echo"<td><a href=\"viewprofileinfo.php?sid=$sid\"><input type=\"submit\" value=\"View Profile Info\"></td>";
+                }
+                    echo"</tr>";
             }
         }
         ?></font>
