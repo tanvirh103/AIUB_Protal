@@ -6,5 +6,8 @@ if(isset($_POST['submit'])){
     $courseid=$_POST['courseId'];
     $teachername=$_POST['teacher'];
     $tid=$_POST['teacherid'];
+    $sec=$_POST['section'];
+    
+    
 }
 ?>
