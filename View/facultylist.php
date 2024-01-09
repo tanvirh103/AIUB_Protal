@@ -31,7 +31,7 @@ $row1=getinfo($id);
             <td>Blood Group</td>
             <td>Email</td>
             <td>Date Of Birth</td>";
-            if($row1['role']=="Admin"){
+            if($row1['role']=="Admin"|| $row1['role']=="Faculty"||$row1['role']=="Admin HR"){
                 echo"<td>Action</td>";
                 }
                 echo"</tr>";
@@ -52,7 +52,7 @@ $row1=getinfo($id);
                 <td>$bg</td>
                 <td>$email</td>
                 <td>$dob</td>";
-                if($row1['role']=="Admin"){
+                if($row1['role']=="Admin"||$row1['role']=="Faculty"||$row1['role']=="Admin HR"){
                     echo"<td><a href=\"viewprofileinfo.php?sid=$sid\"><input type=\"submit\" value=\"View Profile Info\"></td>";
                 }
                     echo"</tr>";
