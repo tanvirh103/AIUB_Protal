@@ -41,10 +41,11 @@ $row=getinfo($id);
                 <a href=\"facultylist.php\">Registred Course</a><br><br>
                 <a href=\"setting.php\">Profile Setting</a><br><br>";
             }else if($row['role']=="Faculty"){
-                echo"<a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>
-                <a href=\"facultylist.php\">Faculty List</a><br><br>
+                echo"<a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>
-                <a href=\"setting.php\">Profile Setting</a><br><br>";
+                <a href=\"setting.php\">Profile Setting</a><br><br>
+                <a href=\"courselist.php\">View Course List</a><br><br>
+                <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>";
             }
             ?>
             </font></td></tr>
