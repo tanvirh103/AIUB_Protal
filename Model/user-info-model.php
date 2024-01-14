@@ -85,4 +85,16 @@ require_once('database.php');
         $result=mysqli_query($conn,$sql);
         return true;
     }
+    function getteacherid($name){
+        $conn=dbConnection();
+        $sql="SELECT userId FROM userinfo WHERE userName='$name' and role='Faculty'";
+        $result=mysqli_query($conn,$sql);
+        $count=mysqli_num_rows($result);
+            if($count==1){
+                $row=mysqli_fetch_assoc($result);
+                return $row;
+            }else{
+                return false;
+            }
+    }
 ?>

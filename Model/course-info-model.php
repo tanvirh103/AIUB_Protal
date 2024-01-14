@@ -12,4 +12,17 @@ function getallcourse(){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+
+function getcourseid($name){
+    $conn=dbConnection();
+    $sql="SELECT courseId FROM courseinfo WHERE courseName='$name'";
+    $result=mysqli_query($conn,$sql);
+    $count=mysqli_num_rows($result);
+        if($count==1){
+            $row=mysqli_fetch_assoc($result);
+            return $row;
+        }else{
+            return false;
+        }
+}
 ?>

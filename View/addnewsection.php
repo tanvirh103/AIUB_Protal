@@ -23,10 +23,8 @@ $result1=getallfaculty();
                         $id=$row['courseId'];
                         echo"<option value=\"$name\">$name</option>";
                     }
-                } 
-                echo"<input type=\"hidden\" name=\"courseId\" value=$id>"
+                }
                 ?>
-                
             </select><br><br>
             Teacher Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;<select name="teacher"><option selected>Select Course Teacher</option>
@@ -37,11 +35,12 @@ $result1=getallfaculty();
                         echo"<option value=\"$teachername\">$teachername</option>";
                     }
                 } 
-                echo"<input type=\"hidden\" name=\"teacherid\" value=\"$tid\">"
                 ?>
             </select><br><br>
             Section:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" name="section" size="20"><br><br>
+            Room Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="room" size="20"><br><br>
             <input type="submit" name="submit" value="Add New Section">
         </center></td></tr>
     </font></table></form></center>
