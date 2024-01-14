@@ -20,4 +20,10 @@ function searchcourse($id){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function getsectionbyfaculty($id){
+    $conn=dbConnection();
+    $sql="SELECT * FROM sectioninfo WHERE teacherId ='$id'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 ?>
