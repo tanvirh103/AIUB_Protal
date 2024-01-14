@@ -27,6 +27,7 @@ $row=getinfo($id);
                <a href=\"addnewsection.php\">Add New Section</a><br><br>
                 <a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>
+                <a href=\"sectionlist.php\">Section List</a><br><br>
                 <a href=\"courselist.php\">View Course List</a><br><br>
                 <a href=\"setting.php\">Profile Setting</a><br><br>
                 <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>";

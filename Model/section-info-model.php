@@ -6,4 +6,12 @@ function addnewsection($courseid,$coursename,$teacherid,$teachername,$sec,$room)
     $result=mysqli_query($conn,$sql);
     return true;
 }
+
+function getallsection(){
+    $conn=dbConnection();
+    $sql="SELECT * FROM sectioninfo";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
+
 ?>
