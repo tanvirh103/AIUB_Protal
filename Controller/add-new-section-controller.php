@@ -2,6 +2,7 @@
 require_once('../Controller/message-controller.php');
 require_once('../Model/course-info-model.php');
 require_once('../Model/user-info-model.php');
+require_once('../Model/section-info-model.php');
 $userid=$_COOKIE['flag'];
 if(isset($_POST['submit'])){
     $name=$_POST['course'];
@@ -21,14 +22,12 @@ if(isset($_POST['submit'])){
     $sec=$_POST['section'];
     $room=$_POST['room'];
 
-    
-    
-    echo"Course name:".$name;
-    echo"Course name:".$courseid;
-    echo"Teacher name:".$teachername;
-    echo"Teacher ID:".$tid;
-    echo"Section Name:".$sec;
-    echo"Room Number:".$room;
+    $result2=addnewsection($courseid,$name,$tid,$teachername,$sec,$room);
+    if($result2!=false){
+        message("New Section added");
+    }else{
+        message("You can't Add Section");
+    }
     
 }
 ?>
