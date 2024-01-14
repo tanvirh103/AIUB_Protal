@@ -8,6 +8,6 @@ if(isset($_POST['submit'])){
     $tid=$_POST['teacherid'];
     $sec=$_POST['section'];
     
-    
+    echo $tid." ".$courseid;
 }
 ?>

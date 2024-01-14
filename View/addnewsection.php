@@ -21,10 +21,12 @@ $result1=getallfaculty();
                     while($row=mysqli_fetch_assoc($result)){
                         $name=$row['courseName'];
                         $id=$row['courseId'];
-                        echo"<option value=\"$name\">$name</option>
-                        <input type=\"hidden\" name=\"courseId\" value=\"$id\">";
+                        echo"<option value=\"$name\">$name</option>";
                     }
-                } ?>
+                } 
+                echo"<input type=\"hidden\" name=\"courseId\" value=$id>"
+                ?>
+                
             </select><br><br>
             Teacher Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;<select name="teacher"><option selected>Select Course Teacher</option>
@@ -32,10 +34,11 @@ $result1=getallfaculty();
                     while($row1=mysqli_fetch_assoc($result1)){
                         $teachername=$row1['userName'];
                         $tid=$row1['userId'];
-                        echo"<option value=\"$teachername\">$teachername</option>
-                        <input type=\"hidden\" name=\"teacherid\" value=\"$tid\">";
+                        echo"<option value=\"$teachername\">$teachername</option>";
                     }
-                } ?>
+                } 
+                echo"<input type=\"hidden\" name=\"teacherid\" value=\"$tid\">"
+                ?>
             </select><br><br>
             Section:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" name="section" size="20"><br><br>
