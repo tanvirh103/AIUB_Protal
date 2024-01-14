@@ -16,7 +16,7 @@ $result=getsectionbyfaculty($id);
     <title>Assign Section List</title>
 </head>
 <body>
-    <center><font family="times new roman" size="6">Assign Section List</font><br><hr width="15%" color="#004ca3">
+    <center><font family="times new roman" size="6">Assign Section List</font><br><hr width="20%" color="#004ca3">
     <br><br>
 </center>
     <center><br><table width="auto" cellspacing="0" cellpadding="15" bordercolor="#004ca3" border="1"><font family="times new roman" size="4">
