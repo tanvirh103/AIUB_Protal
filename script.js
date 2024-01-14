@@ -25,3 +25,4 @@ function searchfaculty(str){
         document.getElementById('message').innerHTML=this.responseText
     }
 }
+

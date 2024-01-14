@@ -13,12 +13,26 @@ $id=$_COOKIE['flag'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <script src="../script.js"></script>
-    <title>Faculty List</title>
+    <script>
+    function section(str){
+    if(str==""){
+        document.getElementById('message').innerHTML="Please search any ID";
+        return;
+    }
+    let xhttp=new XMLHttpRequest();
+    xhttp.open('post','../Controller/search-section-controller.php',true);
+    xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xhttp.send('name='+str);
+    xhttp.onload=function(){
+        document.getElementById('message').innerHTML=this.responseText
+    }
+}
+    </script>
+    <title>Section List</title>
 </head>
 <body>
     <center><font family="times new roman" size="6">Section List</font><br><hr width="15%" color="#004ca3">
-    <br><input type="text" id="search" placeholder="Search by Course ID" onkeyup="searchcourse(this.value)" size="25"><br><br>
+    <br><input type="text" id="search" placeholder="Search by Course ID" onkeyup="section(this.value)" size="25"><br><br>
     <font family="times new roman" id="message"></font>
 </center>
     <center><br><table width="auto" cellspacing="0" cellpadding="15" bordercolor="#004ca3" border="1"><font family="times new roman" size="4">

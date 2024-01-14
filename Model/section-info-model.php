@@ -14,4 +14,10 @@ function getallsection(){
     return $result;
 }
 
+function searchcourse($id){
+    $conn=dbConnection();
+    $sql="SELECT * FROM sectioninfo WHERE courseId LIKE'%$id%'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 ?>
