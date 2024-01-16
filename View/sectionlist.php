@@ -40,17 +40,20 @@ $id=$_COOKIE['flag'];
          echo"<tr><td>Course Name</td>
             <td>Teacher Name</td>
             <td>Section</td>
-            <td>Room Number</td>";
+            <td>Room Number</td>
+            <td>Day Time</td>";
             while($row=mysqli_fetch_assoc($result)){
                 $coursename=$row['courseName'];
                 $teachername=$row['teacherName'];
                 $section=$row['sectionName'];
                 $room=$row['roomNumber'];
+                $time=$row['dayTime'];
              echo"<tr>
                 <td>$coursename</td>
                 <td>$teachername</td>
                 <td>$section</td>
-                <td>$room</td>";
+                <td>$room</td>
+                <td>$time</td>";
             }
         }
         ?></font>

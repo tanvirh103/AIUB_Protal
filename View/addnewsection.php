@@ -16,7 +16,7 @@ $result1=getallfaculty();
     <center><font family="times new roman" size="6">Add New Section</font><hr width="20%" color="#004ca3"></center>
     <center><br><form action="../Controller/add-new-section-controller.php" method="post"><table border="1" width="auto" cellpadding="25" cellspacing="0" bordercolor="#004ca3"><font family="times new roman" size="4">
         <tr><td><center>
-            Course Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="course"><option selected>Select Course</option>
+            Course Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="course"><option selected>Select Course</option>
                 <?php if(mysqli_num_rows($result)>0){
                     while($row=mysqli_fetch_assoc($result)){
                         $name=$row['courseName'];
@@ -27,7 +27,7 @@ $result1=getallfaculty();
                 ?>
             </select><br><br>
             Teacher Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;<select name="teacher"><option selected>Select Course Teacher</option>
+            &nbsp;&nbsp;&nbsp;<select name="teacher"><option selected>Select Course Teacher</option>
             <?php if(mysqli_num_rows($result1)>0){
                     while($row1=mysqli_fetch_assoc($result1)){
                         $teachername=$row1['userName'];
@@ -41,7 +41,7 @@ $result1=getallfaculty();
             <input type="text" name="section" size="20"><br><br>
             Room Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" name="room" size="20"><br><br>
-            Day Time:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Day Time:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" name="time" size="20"><br><br>
             <input type="submit" name="submit" value="Add New Section">
         </center></td></tr>
