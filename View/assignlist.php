@@ -24,24 +24,26 @@ $result=getsectionbyfaculty($id);
          echo"<tr>
             <td>Course ID</td>
             <td>Course Name</td>
-            <td>Teacher Name</td>
             <td>Section ID</td>
             <td>Section</td>
-            <td>Room Number</td>";
+            <td>Room Number</td>
+            <td>Day Time</td>
+            </tr>";
             while($row=mysqli_fetch_assoc($result)){
                 $courseid=$row['courseId'];
                 $coursename=$row['courseName'];
-                $teachername=$row['teacherName'];
+                $time=$row['dayTime'];
                 $sectionid=$row['sectionId'];
                 $section=$row['sectionName'];
                 $room=$row['roomNumber'];
              echo"<tr>
                 <td>$courseid</td>
                 <td>$coursename</td>
-                <td>$teachername</td>
                 <td>$sectionid</td>
                 <td>$section</td>
-                <td>$room</td>";
+                <td>$room</td>
+                <td>$time</td>
+                </tr>";
             }
         }
         ?></font>
