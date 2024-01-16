@@ -32,4 +32,16 @@ function searchsection($name){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function getinforoom($coursename,$section){
+    $conn=dbConnection();
+    $sql="SELECT * FROM sectioninfo WHERE courseName='$coursename' and sectionName='$section'";
+    $result=mysqli_query($conn,$sql);
+    $count=mysqli_num_rows($result);
+    if($count==1){
+        $row=mysqli_fetch_assoc($result);
+        return $row;
+    }else{
+        return false;
+    }
+}
 ?>
