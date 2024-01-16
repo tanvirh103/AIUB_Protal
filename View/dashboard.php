@@ -40,6 +40,7 @@ $row=getinfo($id);
             }else if($row['role']=="Student"){
                 echo" <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>
                 <a href=\"facultylist.php\">Registred Course</a><br><br>
+                <a href=\"registration.php\">Registration</a><br><br>
                 <a href=\"setting.php\">Profile Setting</a><br><br>";
             }else if($row['role']=="Faculty"){
                 echo"<a href=\"facultylist.php\">Faculty List</a><br><br>

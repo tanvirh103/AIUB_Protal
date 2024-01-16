@@ -26,4 +26,10 @@ function getsectionbyfaculty($id){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+function searchsection($name){
+    $conn=dbConnection();
+    $sql="SELECT * FROM sectioninfo WHERE courseName='$name'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 ?>
