@@ -39,18 +39,21 @@ $id=$_COOKIE['flag'];
         <?php if(mysqli_num_rows($result)>0){
          echo"<tr><td>Course Name</td>
             <td>Teacher Name</td>
+            <td>Section ID</td>
             <td>Section</td>
             <td>Room Number</td>
             <td>Day Time</td>";
             while($row=mysqli_fetch_assoc($result)){
                 $coursename=$row['courseName'];
                 $teachername=$row['teacherName'];
+                $sectionid = $row['sectionId'];
                 $section=$row['sectionName'];
                 $room=$row['roomNumber'];
                 $time=$row['dayTime'];
              echo"<tr>
                 <td>$coursename</td>
                 <td>$teachername</td>
+                <td>$sectionid</td>
                 <td>$section</td>
                 <td>$room</td>
                 <td>$time</td>";

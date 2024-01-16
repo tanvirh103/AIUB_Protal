@@ -7,12 +7,15 @@ if (mysqli_num_rows($result) > 0) {
     <table width=\"auto\" cellspacing=\"0\" cellpadding=\"15\" bordercolor=\"#004ca3\" border=\"1\"><font family=\"times new roman\" size=\"4\">
     <tr><td>Course Name</td>
     <td>Teacher Name</td>
+    <td>Section ID</td>
     <td>Section</td>
     <td>Room Number</td>          
-    <td>Day Time</td></tr>";
+    <td>Day Time</td>
+    </tr>";
     while ($row = mysqli_fetch_assoc($result)) {
         $coursename = $row['courseName'];
         $teachername = $row['teacherName'];
+        $sectionid = $row['sectionId'];
         $section = $row['sectionName'];
         $room = $row['roomNumber'];
         $time=$row['dayTime'];
@@ -20,9 +23,11 @@ if (mysqli_num_rows($result) > 0) {
         <tr>
         <td>$coursename</td>
         <td>$teachername</td>
+        <td>$sectionid</td>
         <td>$section</td>
         <td>$room</td>
-        <td>$time</td></tr>";
+        <td>$time</td>
+        </tr>";
     }
 }else{
     echo"<tr><td>No Section Found</td></tr>";
