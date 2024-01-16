@@ -41,6 +41,8 @@ $result1=getallfaculty();
             <input type="text" name="section" size="20"><br><br>
             Room Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <input type="text" name="room" size="20"><br><br>
+            Day Time:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="time" size="20"><br><br>
             <input type="submit" name="submit" value="Add New Section">
         </center></td></tr>
     </font></table></form></center>

@@ -1,8 +1,8 @@
 <?php
 require_once('../Model/database.php');
-function addnewsection($courseid,$coursename,$teacherid,$teachername,$sec,$room){
+function addnewsection($courseid,$coursename,$teacherid,$teachername,$sec,$room,$time){
     $conn=dbConnection();
-    $sql="INSERT INTO sectioninfo VALUES('$courseid','$coursename','$teacherid','$teachername','','$sec','$room')";
+    $sql="INSERT INTO sectioninfo VALUES('$courseid','$coursename','$teacherid','$teachername','','$sec','$room','$time')";
     $result=mysqli_query($conn,$sql);
     return true;
 }

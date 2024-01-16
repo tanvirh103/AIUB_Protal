@@ -21,8 +21,8 @@ if(isset($_POST['submit'])){
     }
     $sec=$_POST['section'];
     $room=$_POST['room'];
-
-    $result2=addnewsection($courseid,$name,$tid,$teachername,$sec,$room);
+    $time=$_POST['time'];
+    $result2=addnewsection($courseid,$name,$tid,$teachername,$sec,$room,$time);
     if($result2!=false){
         message("New Section added");
     }else{
