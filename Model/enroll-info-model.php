@@ -7,5 +7,10 @@ function enrollcourse($studentid,$courseid,$coursename,$secid,$secname,$room,$ti
     return true;
 }
 
-
+function getenrolledcourse($id){
+    $conn=dbConnection();
+    $sql="SELECT * FROM enrollinfo WHERE studentId ='$id'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 ?>
