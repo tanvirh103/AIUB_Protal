@@ -24,21 +24,7 @@ $result1=getallsection();
     xhttp.onload=function(){
         document.getElementById('message').innerHTML=this.responseText
     }
-}
-function room(str){
-    if(str==""){
-        document.getElementById('message').innerHTML="Please search any ID";
-        return;
-    }
-    console.log(str);
-    let xhttp=new XMLHttpRequest();
-    xhttp.open('post','../Controller/room-info-controller.php',true);
-    xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    xhttp.send('name='+str);
-    xhttp.onload=function(){
-        document.getElementById('message').innerHTML=this.responseText
-    }
-}
+}  
     </script>
     <title>Add New Course</title>
 </head>
@@ -51,14 +37,15 @@ function room(str){
                     while($row=mysqli_fetch_assoc($result)){
                         $name=$row['courseName'];
                         echo"<option value=\"$name\">$name</option>";
+                        if(count($row)<0){
+                            break;
+                        }
                     }
                     echo" </select><br><br>"; 
                 }
                 ?>
-            Available Section:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="section" id="message" onchange="room(this.value)"><option selected>Select Section</option></select><br><br>
-            Room Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" name="room" size="20" id="message" readonly><br><br>
-            <input type="submit" name="submit" value="Add New Section">
+            Available Section:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="section" id="message"><option selected>Select Section</option></select><br><br>
+            <input type="submit" name="submit" value="Add this Course">
         </center></td></tr>
     </font></table></form></center>
 </body>
