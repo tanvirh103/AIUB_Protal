@@ -16,7 +16,6 @@ $result1=getallsection();
         document.getElementById('message').innerHTML="Please search any ID";
         return;
     }
-    console.log(str);
     let xhttp=new XMLHttpRequest();
     xhttp.open('post','../Controller/registration-section-controller.php',true);
     xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
