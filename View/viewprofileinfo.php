@@ -42,8 +42,7 @@ $flag = 0;
             Email :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=\"text\" value=\"{$row1['email']}\" size=\"25\" align=\"center\" readonly><br><br>
             Date Of Birth :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=\"text\" value=\"{$row1['dob']}\" size=\"25\" align=\"center\" readonly><br><br>";
             }
-            ?>
-            
+            ?>  
         </center></font></td></tr>
     </table></center>
 </body>
