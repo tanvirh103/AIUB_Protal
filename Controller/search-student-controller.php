@@ -1,5 +1,8 @@
 <?php
 require_once('../Model/user-info-model.php');
+require_once('../Model/user-info-model.php');
+$id=$_COOKIE['flag'];
+$row1=getinfo($id);
 $name = $_REQUEST['name'];
 $result = searchstudent($name);
 if (mysqli_num_rows($result) > 0) {
@@ -11,9 +14,13 @@ if (mysqli_num_rows($result) > 0) {
     <td>Mother's Name</td>
     <td>Blood Group</td>
     <td>Email</td>
-    <td>Date Of Birth</td>           
-    </tr>";
+    <td>Date Of Birth</td>";
+    if($row1['role']=="Admin"||$row1['role']=="Faculty"||$row1['role']=="Admin HR"){
+        echo"<td>Action</td>";
+        }
+        echo"</tr>";
     while ($row = mysqli_fetch_assoc($result)) {
+        $sid=$row['userId'];
         $profilepicture = $row['profilePicture'];
         $fullname = $row['userName'];
         $father = $row['fathersName'];
@@ -29,8 +36,11 @@ if (mysqli_num_rows($result) > 0) {
         <td>$mother</td>
         <td>$bg</td>
         <td>$email</td>
-        <td>$dob</td>
-        </tr>";
+        <td>$dob</td>";
+        if($row1['role']=="Admin"||$row1['role']=="Faculty"||$row1['role']=="Admin HR"){
+            echo"<td><a href=\"viewprofileinfo.php?sid=$sid\"><input type=\"submit\" value=\"View Profile Info\"></td>";
+        }
+            echo"</tr>";
     }
 }else{
     echo"<tr><td>NO Match Found</td></tr>";

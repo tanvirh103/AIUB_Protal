@@ -7,5 +7,16 @@ function addresult($courseid,$coursename,$sectionid,$sectionname,$teacherid,$tea
     return true;
 }
 
-
+function getallstudentlist($id){
+    $conn=dbConnection();
+    $sql="SELECT * FROM resultinfo WHERE sectionId ='$id'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
+function searchstudentresult($name){
+    $conn=dbConnection();
+    $sql="SELECT * FROM resultinfo WHERE studentName LIKE '%$name%'";
+    $result=mysqli_query($conn,$sql);
+    return $result;
+}
 ?>
