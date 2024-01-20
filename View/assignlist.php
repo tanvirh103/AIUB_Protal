@@ -1,11 +1,13 @@
 <?php
 require_once('../Model/section-info-model.php');
 require_once('../Controller/message-controller.php');
+require_once('../Model/user-info-model.php');
 if(!isset($_COOKIE['flag'])){
     message("You can't access this page");
 }
 $id=$_COOKIE['flag'];
 $result=getsectionbyfaculty($id);
+$row1=getinfo($id);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,8 +29,11 @@ $result=getsectionbyfaculty($id);
             <td>Section ID</td>
             <td>Section</td>
             <td>Room Number</td>
-            <td>Day Time</td>
-            </tr>";
+            <td>Day Time</td>";
+            if($row1['role']=="Faculty"){
+                echo"<td>Action</td>";
+                }
+                echo"</tr>";
             while($row=mysqli_fetch_assoc($result)){
                 $courseid=$row['courseId'];
                 $coursename=$row['courseName'];
@@ -42,8 +47,11 @@ $result=getsectionbyfaculty($id);
                 <td>$sectionid</td>
                 <td>$section</td>
                 <td>$room</td>
-                <td>$time</td>
-                </tr>";
+                <td>$time</td>";
+                if($row1['role']=="Faculty"){
+                    echo"<td><a href=\"studentlistresult.php?secid=$sectionid\"><input type=\"submit\" value=\"View Student List\"></td>";
+                }
+                    echo"</tr>";
             }
         }
         ?></font>
