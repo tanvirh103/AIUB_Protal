@@ -1,5 +1,6 @@
 <?php
 require_once('../Model/enroll-info-model.php');
+require_once('../Model/result-info-model.php');
 require_once('message-controller.php');
 $userid=$_COOKIE['flag'];
 if(isset($_POST['submit'])){
