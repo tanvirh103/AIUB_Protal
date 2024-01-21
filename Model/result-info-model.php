@@ -19,4 +19,15 @@ function searchstudentresult($name){
     $result=mysqli_query($conn,$sql);
     return $result;
 }
+
+function getresult($id,$secid){
+    $conn=dbConnection();
+    $sql="SELECT * FROM resultinfo WHERE studentId='$id' and sectionId='$secid'";
+    $result=mysqli_query($conn,$sql);
+    $count=mysqli_num_rows($result);
+    if($count==1){
+        $row=mysqli_fetch_assoc($result);
+        return $row;
+    }
+}
 ?>

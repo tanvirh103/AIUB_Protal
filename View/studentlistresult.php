@@ -69,7 +69,7 @@ $row1=getinfo($id);
                 <td>$studentId</td>
                 <td>$studentName</td>";
                 if($row1['role']=="Faculty"){
-                    echo"<td><a href=\"updatemarks.php?sid=$studentId\"><input type=\"submit\" value=\"Update Marks\"></td>";
+                    echo"<td><a href=\"updatemarks.php?sid=$studentId&secid=$sectionID\"><input type=\"submit\" value=\"Update Marks\"></td>";
                 }
                     echo"</tr>";
             }
