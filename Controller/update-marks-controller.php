@@ -6,7 +6,13 @@ if(isset($_POST['submit'])){
     $sectionid=$_POST['sectionid'];
     $midresult=$_POST['midresult'];
     $finalresult=$_POST['finalresult'];
-    echo $sectionid." ".$studentid;
     
+    $result=updateresult($studentid,$sectionid,$midresult,$finalresult);
+    
+    if($result!=false){
+        message("Marks Updated Successfully");
+    }else{
+        message("Update Marks Opearation Failed");
+    }
 }
 ?>
