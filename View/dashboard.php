@@ -38,10 +38,10 @@ $row=getinfo($id);
                 <a href=\"setting.php\">Profile Setting</a><br><br>
                 <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>";
             }else if($row['role']=="Student"){
-                echo" <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>
-                <a href=\"enrolledcourselist.php\">Registred Course</a><br><br>
-                <a href=\"registration.php\">Registration</a><br><br>
-                <a href=\"setting.php\">Profile Setting</a><br><br>";
+                echo"<a href=\"registration.php\">Registration</a><br><br>
+                <a href=\"setting.php\">Profile Setting</a><br><br>
+                <a href=\"enrolledcourselist.php\">Enrolled Course</a><br><br>
+                <a href=\"viewprofileinfo.php\">View Profile Information</a><br><br>";
             }else if($row['role']=="Faculty"){
                 echo"<a href=\"facultylist.php\">Faculty List</a><br><br>
                 <a href=\"studentlist.php\">Student List</a><br><br>
