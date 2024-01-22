@@ -1,5 +1,10 @@
 <?php 
 require_once('../Model/section-info-model.php');
+require_once('../Controller/message-controller.php');
+if(!isset($_COOKIE['flag'])){
+    message("You cann't access the page");
+}
+
 if(isset($_POST['submit'])){
     $coursename=$_POST['course'];
     $section=$_POST['section'];

@@ -1,6 +1,11 @@
 <?php
 require_once('../Model/enroll-info-model.php');
 require_once('../Model/user-info-model.php');
+require_once('../Controller/message-controller.php');
+if(!isset($_COOKIE['flag'])){
+    message("You cann't access the page");
+}
+
 $id=$_COOKIE['flag'];
 $result=getenrolledcourse($id);
 $row1=getinfo($id);

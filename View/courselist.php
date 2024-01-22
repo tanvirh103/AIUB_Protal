@@ -1,6 +1,10 @@
 <?php
 require_once('../Model/course-info-model.php');
-require_once('../Model/course-info-model.php');
+require_once('../Controller/message-controller.php');
+if(!isset($_COOKIE['flag'])){
+    message("You cann't access the page");
+}
+
 $result=getallcourse();
 ?>
 <!DOCTYPE html>

@@ -1,6 +1,11 @@
 <?php
 require_once('../Model/section-info-model.php');
 require_once('../Model/user-info-model.php');
+require_once('../Controller/message-controller.php');
+if(!isset($_COOKIE['flag'])){
+    message("You cann't access the page");
+}
+
 $result=getallsection();
 $result1=getallsection();
 ?>
