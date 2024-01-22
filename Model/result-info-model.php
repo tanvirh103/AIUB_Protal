@@ -30,4 +30,11 @@ function getresult($id,$secid){
         return $row;
     }
 }
+
+function updateresult($id,$secid,$mid,$final){
+    $conn=dbConnection();
+    $sql="UPDATE resultinfo SET midResult = '$mid', finalResult= '$final' WHERE studentId ='$id' and sectionId='$secid'";
+    $result=mysqli_query($conn,$sql);
+    return true;
+}
 ?>
