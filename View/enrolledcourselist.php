@@ -47,7 +47,7 @@ $row1=getinfo($id);
                 <td>$room</td>
                 <td>$time</td>";
                 if($row1['role']=="Student"){
-                    echo"<td><a href=\"viewprofileinfo.php?sid=$sectionid\"><input type=\"submit\" value=\"View Marks\"></td>";
+                    echo"<td><a href=\"updatemarks.php?sid=$id &secid=$sectionid\"><input type=\"submit\" value=\"View Marks\"></td>";
                 }
                     echo"</tr>";
             }
